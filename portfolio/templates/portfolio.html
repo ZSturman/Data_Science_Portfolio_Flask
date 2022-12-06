@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+<section>
+
+    <div class="container">
+
+
+
+        <a href="{{ url_for('home') }}" class="btn btn-outline-secondary m-2"> Back</a>
+        <h1 class="display-1">Portfolio</h1>
+
+        <div class="row">
+
+            {% for project in projects %}
+
+            <div class="col-2" data-bs-toggle="modal" data-bs-target="#{{ project['id'] }}">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <img class="proj-thumbnail" src="{{ project['img'] }}" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="modal fade" id="{{ project['id'] }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h6 id="exampleModalLabel">{{ project['date'] }}</h6>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="row text-center">
+
+                                <img style="width: 150px;" class="mx-auto text-center"
+                                    src="{{ project['icon'] }}" alt="">
+
+                            </div>
+
+                            <br>
+                            <h3 class="text-center">{{ project['category'] }}</h3>
+                            <br>
+                            <h2>{{ project['title'] }}</h2>
+                            <p>{{ project['description'] }}</p>
+                            <div class="px-5 mb-5">
+
+
+                                <img src="{{ project['img'] }}" alt="" class="graph">
+                            </div>
+                            <p>{{ project["closing"] }}</p>
+
+                            <button class="btn btn-outline-primary">Button One</button>
+                            <button class="btn btn-outline-info">Button Two</button>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            {% endfor %}
+
+
+
+        </div>
+
+        {% for project in projects %}
+
+        {% endfor %}
+
+
+
+
+
+
+
+</section>
+
+
+{% endblock content %}

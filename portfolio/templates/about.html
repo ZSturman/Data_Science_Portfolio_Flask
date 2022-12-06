@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+    <a href="{{ url_for('home') }}" class="btn btn-outline-secondary m-2"> Back</a>
+<h1>About</h1>
+
+<h5>Animals</h5>
+<p>I like animals</p>
+<a href="{{ url_for('animals') }}" class="col mx-5 text-decoration-none text-dark new-sect">
+    <img src="../static/images/dog_prints.png" alt="" class="p-5 category-icon">
+    <h4 class="fw-light">Animal Enthusiast</h4>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate earum, laborum eos explicabo
+        blanditiis at quas quia doloribus, quo veniam ab? Ad maiores harum quos!</p>
+</a>
+<hr>
+
+
+<h5>Science</h5>
+<h6>Quantum mechanics/ Evolution/ Physics</h6>
+<p>Read "A Brief History of Time" and was upset by how little I understood</p>
+<hr>
+
+<h5>Writing</h5>
+<p>Alzhimer's story </p>
+<hr>
+
+<h5>Comedy</h5>
+<p>Greenhorn</p>
+</div>
+
+
+
+
+{% endblock content %}

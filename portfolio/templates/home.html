@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section>
+
+    <div class="position-absolute top-50 start-50 translate-middle mt-5">
+        <img src="../static/images/main_logo.png" alt="">
+
+    </div>
+</section>
+
+
+
+<div class="bg-secondary" id="about">
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-3">
+                <img src="../static/images/ZacharySturmanHeadshotNov2022.jpg" alt="Zachary Sturman Headshot"
+                    class="headshot rounded-circle">
+            </div>
+            <div class="col">
+                <h1>I'm Zachary,</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatem odit provident,
+                    inventore dignissimos at! Alias repellendus inventore cum quas non, natus eius! Quidem non
+                    laudantium magni quam rem alias assumenda, incidunt rerum, aperiam nemo corporis aliquid.
+                    Laudantium, provident accusantium ab nulla accusamus soluta itaque? Nisi adipisci quos ea optio?
+                </p>
+                <a class="btn btn-outline-info" href="{{ url_for('portfolio') }}">Portfolio</a>
+                <a class="btn btn-outline-info" href="{{ url_for('about') }}">More...</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="display-6 fw-lighter text-center my-5"><em> " Here's some quote"</em></div>
+    </div>
+</div>
+
+<section>
+
+    <div class="container my-5">
+
+        <div class="row text-center">
+            <h3 class="fw-light">Services</h3>
+        </div>
+
+        <div class="row px-5">
+            <a href="{{ url_for('data_science') }}" class="col mx-5 text-decoration-none text-dark new-sect">
+                <div class="text-center">
+                    <img src="../static/images/graph_icon.png" alt="" class="p-5 category-icon anim">
+                </div>
+                <h4 class="fw-light">Data Science/ Analytics</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate earum, laborum eos explicabo
+                    blanditiis at quas quia doloribus, quo veniam ab? Ad maiores harum quos!</p>
+            </a>
+            <a href="{{ url_for('python_developer') }}" class="col mx-5 text-decoration-none text-dark new-sect">
+                <div class="text-center">
+                    <img src="../static/images/python.png" alt="" class="p-5 category-icon anim">
+                </div>
+                <h4 class="fw-light">Python Developer</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate earum, laborum eos explicabo
+                    blanditiis at quas quia doloribus, quo veniam ab? Ad maiores harum quos!</p>
+            </a>
+            <a href="{{ url_for('infographics') }}" class="col mx-5 text-decoration-none text-dark new-sect">
+                <div class="text-center">
+                    <img src="../static/images/graph_icon.png" alt="" class="p-5 category-icon anim">
+                </div>
+                <h4 class="fw-light">Infographics</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate earum, laborum eos explicabo
+                    blanditiis at quas quia doloribus, quo veniam ab? Ad maiores harum quos!</p>
+            </a>
+
+
+        </div>
+    </div>
+</section>
+
+<section>
+
+
+    <div class="container my-5">
+        {% for project in projects %}
+
+        <div class="main-proj-head bg-dark">
+
+            <div class="d-inline-flex justify-content-between w-100">
+                <h1 class="text-white">Flask Website Design</h1>
+                <h5 class="text-secondary">{{ project['date'] }}</h5>
+            </div>
+
+
+
+        </div>
+
+
+        <hr>
+        <p class="text-secondary">{{ project["date"] }}</p>
+
+        <h3>{{ project["title"] }}</h3>
+        <p>{{ project["description"] }}</p>
+        <div class="px-5 mb-5">
+
+
+            <img src="{{ project['img'] }}" alt="" class="graph">
+        </div>
+        <p>{{ project["closing"] }}</p>
+
+
+        <button class="btn btn-outline-primary">Button One</button>
+        <button class="btn btn-outline-info">Button Two</button>
+
+
+
+
+        {% endfor %}
+    </div>
+
+
+</section>
+
+
+
+
+
+
+
+{% endblock content %}
