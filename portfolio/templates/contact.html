@@ -1,0 +1,148 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div id="contact-page" class="container">
+
+send_mail
+
+
+    <h2 class="text-center my-5">Let me know how I can help you</h2>
+    <form action="{{ url_for('send_mail') }}" method="POST">
+        <div class="mb-3 mx-5">
+            <label for="contact-form-name" class="form-label">Name</label>
+            <input name="name" type="text" class="form-control" id="contact-form-name" placeholder="John Smith">
+            <label for="contact-form-email" class="form-label">Email address</label>
+            <input name="email" type="email" class="form-control" id="contact-form-email" placeholder="name@example.com">
+        </div>
+        <div class="mb-3 mx-5">
+            <label for="contact-form-message" class="form-label">Example textarea</label>
+            <textarea name="message" class="form-control" id="contact-form-message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mx-5 mb-5">Send Message</button>
+    </form>
+
+    <h3>Other ways to get in touch:</h3>
+    <h4>• Linkedin</h4>
+    <h4>• Twitter</h4>
+    <h4>• Phone</h4>
+    <h4>• Email</h4>
+
+
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+    <h5>Call to Action</h5>
+
+    <ul>
+        <li>
+            "no obligation" - - "risk-free"
+        </li>
+    </ul>
+
+    <br>
+
+    <div class="card p-5 text-center">
+        <p>No Obligation</p>
+        <button class="btn btn-primary">Take Me There</button>
+    </div>
+
+
+
+
+
+    <br>
+    <br>
+
+
+    <ul>
+        <li>
+            keep them interacting with your site
+        </li>
+        <li>
+            They have three CTAs in the same hero square that support their strong headline, Power Your Business
+            with Square. The subhead has a quick explanation of what Square does, but the power comes from
+            letting the user know they can get started for free or contact sales if they have additional
+            questions. A smart move was the final CTA, which was preceded by See how a business owner uses
+            Square.
+        </li>
+        <li>
+            headline is "See whats next."But the subhead is what hits home watch anywhere. Cancel anytime.
+        </li>
+        <li>
+            The headline, <strong> “Our new digital cover is out now!” followed by a large white CTA that says read more
+                is the perfect segway into getting readers to click the button. </strong>
+        </li>
+        <li>
+            Its really boring saying sign up, so they found another way to get interaction and get their
+            audience engaged. Who wouldnt want to be awesome? Then, they have another CTA regarding the blog
+            with Yes, take me there. It works well because its fun. Its also creating urgency and the use of an
+            arrow to create a visually stimulating directive.
+        </li>
+        <li>
+            Visibility
+            You want your CTA to be very noticeable once they land on the page. The font should command
+            attention and make the user want to read it.
+        </li>
+
+
+    </ul>
+
+    <ul>
+        <li>Benefit: There should be a clear benefit to someone clicking on your CTA and completing the action.
+        </li>
+        <li>
+            Text
+            The text should have action verbs to move the user forward. Start with command verbs that directly
+            correlate
+            with what you want
+        </li>
+        <li>
+            Use secondary CTAs to reinforce the high value of the first one but give them extra options so they
+            wont
+            just leave the site if they only have one choice.Giving them a clear directive like buy now,
+            discover more,
+            or other verbs that compel them to do something works well.
+        </li>
+        <li>
+            Sense of urgency
+            Distractions are very common for online users.
+        </li>
+        <li>
+            Establish credibility
+            Give enough information so the user will feel comfortable feeling that you know what you are talking
+            about
+            and are trustworthy enough to want to learn more.
+        </li>
+        <li>
+            Creative
+            Would you rather click on, fill out this form or start your healthy journey now?
+        </li>
+
+        <li>
+
+            Use numbers when you can
+            People like seeing prices. You should use pricing when you can. Although it may be in your copy,
+            using a CTA
+            that says, get $300 off now! will get the clicks you want
+        </li>
+    </ul>
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock content %}

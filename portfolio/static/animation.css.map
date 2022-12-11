@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACF,gBAAgB,EAAE,+BAA+B;EACjD,iBAAiB,EAAE,SAAS;EAC5B,eAAe,EAAE,OAAO;EACxB,qBAAqB,EAAE,MAAM;CACpC;;AAGD,AAAA,gBAAgB,CAAA;EACZ,SAAS,EAAE,kBAAkB;EAC7B,gBAAgB,EAAE,MAAM;CACzB;;AAEH,AAAA,iBAAiB,CAAA;EACb,SAAS,EAAE,kBAAkB;EAC7B,gBAAgB,EAAE,MAAM;CAE3B;;AAED,AAAA,aAAa,EAAC,aAAa,EAAE,eAAe,CAAA;EACxC,SAAS,EAAE,0BAA0B;EACrC,gBAAgB,EAAE,MAAM;CAC3B;;AAID,UAAU,CAAV,KAAU;EACN,IAAI;IACF,SAAS,EAAE,aAAa;;EAE1B,EAAE;IACA,SAAS,EAAE,eAAe;;;;AAQhC;;;IAGI;AAMJ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;GAsEG;AAcH;;;;KAIK;AAEL;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;KAwGK",
+    "sources": [
+        "animation.scss"
+    ],
+    "names": [],
+    "file": "animation.css"
+}

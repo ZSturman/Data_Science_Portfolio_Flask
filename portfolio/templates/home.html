@@ -1,17 +1,59 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<section>
+<section class="bg-light" id="home-main">
 
     <div class="position-absolute top-50 start-50 translate-middle mt-5">
-        <img src="../static/images/main_logo.png" alt="">
+
+
+        <div class="d-inline-flex align-items-center" id="name-logo">
+            <h1 class="display-1">Zachary</h1>
+            <svg id="logo-svg" width="150" height="150" viewBox="0 0 1832 1832" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g id="logo_v1" clip-path="url(#clip0_4_3)">
+                    <path id="triangle-one"
+                        d="M12.7885 940.711C9.11523 1136.29 74.0535 1326.21 197.294 1480.32L933 940L12.7885 940.711Z"
+                        fill="#00747B" />
+                    <path id="triangle-two"
+                        d="M1715 940C1715 822.94 1685.89 707.536 1630.04 603.193C1574.19 498.851 1493.18 408.523 1393.62 339.571L933 940H1715Z"
+                        fill="#00C9A5" />
+                    <circle id="ring-main" cx="916" cy="916" r="440" stroke="#182A45" stroke-width="200" />
+                    <path id="inner-ring-thick"
+                        d="M916 478C973.519 478 1030.47 489.329 1083.62 511.341C1136.76 533.352 1185.04 565.615 1225.71 606.287C1266.38 646.959 1298.65 695.244 1320.66 748.385C1342.67 801.525 1354 858.481 1354 916L1353.53 916C1353.53 858.542 1342.22 801.647 1320.23 748.563C1298.24 695.479 1266.01 647.245 1225.38 606.616C1184.75 565.987 1136.52 533.759 1083.44 511.771C1030.35 489.783 973.458 478.465 916 478.465L916 478Z"
+                        stroke="#C7FFFF" stroke-width="100" stroke-linejoin="round" />
+                    <path id="inner-ring-thin"
+                        d="M916 478C1005.55 478 1092.95 505.448 1166.42 556.647C1239.89 607.846 1295.9 680.334 1326.91 764.345C1357.91 848.355 1362.42 939.851 1339.83 1026.5C1317.24 1113.16 1268.63 1190.8 1200.55 1248.98C1132.47 1307.16 1048.2 1343.07 959.081 1351.88C869.965 1360.68 780.291 1341.96 702.141 1298.24C623.991 1254.52 561.121 1187.89 522.002 1107.34C482.883 1026.78 469.395 936.174 483.355 847.718L483.815 847.791C469.869 936.152 483.343 1026.66 522.42 1107.13C561.498 1187.6 624.301 1254.16 702.368 1297.83C780.435 1341.51 870.014 1360.21 959.035 1351.41C1048.06 1342.61 1132.24 1306.74 1200.25 1248.63C1268.25 1190.51 1316.81 1112.95 1339.38 1026.39C1361.95 939.826 1357.44 848.427 1326.47 764.506C1295.5 680.584 1239.54 608.173 1166.15 557.029C1092.76 505.885 1005.45 478.465 916 478.465L916 478Z"
+                        stroke="#C7D6FF" stroke-width="50" stroke-linejoin="round" />
+                    <path id="triangle-three"
+                        d="M1081.22 1685.39C1189.17 1662.56 1290.52 1614.06 1377.54 1543.59C1464.56 1473.12 1534.93 1382.55 1583.28 1278.81L933 940L1081.22 1685.39Z"
+                        fill="#005889" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_4_3">
+                        <rect width="1832" height="1832" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <h1 class="display-1">Sturman</h1>
+        </div>
+        <div class="text-center my-5">
+            <a href="{{ url_for('contact') }}" class="btn btn-outline-success rounded-5">
+                <h5 class="m-0 p-0 fw-light">Call To Action</h5>
+            </a>
+        </div>
+
+
+
+
 
     </div>
 </section>
 
 
 
-<div class="bg-secondary" id="about">
+
+
+<div id="about">
     <div class="container">
         <div class="row p-5">
             <div class="col-3">
@@ -20,10 +62,11 @@
             </div>
             <div class="col">
                 <h1>I'm Zachary,</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatem odit provident,
-                    inventore dignissimos at! Alias repellendus inventore cum quas non, natus eius! Quidem non
-                    laudantium magni quam rem alias assumenda, incidunt rerum, aperiam nemo corporis aliquid.
-                    Laudantium, provident accusantium ab nulla accusamus soluta itaque? Nisi adipisci quos ea optio?
+                <p>Once you create your call-to-action, use A/B testing to see how they perform
+
+
+                    Scroll maps, heatmaps, and recordings can give you some indication on what works best and connect
+                    with your audience.
                 </p>
                 <a class="btn btn-outline-info" href="{{ url_for('portfolio') }}">Portfolio</a>
                 <a class="btn btn-outline-info" href="{{ url_for('about') }}">More...</a>
@@ -41,84 +84,159 @@
     <div class="container my-5">
 
         <div class="row text-center">
-            <h3 class="fw-light">Services</h3>
+            <h3 class="fw-light">Skills and Services</h3>
         </div>
 
-        <div class="row px-5">
-            <a href="{{ url_for('data_science') }}" class="col mx-5 text-decoration-none text-dark new-sect">
+        <div class="row p-5">
+            <a href="{{ url_for('data_analytics') }}" class="col mx-5 text-decoration-none text-dark new-sect">
                 <div class="text-center">
                     <img src="../static/images/graph_icon.png" alt="" class="p-5 category-icon anim">
                 </div>
-                <h4 class="fw-light">Data Science/ Analytics</h4>
+                <h4 class="fw-light">Data Analytics</h4>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate earum, laborum eos explicabo
                     blanditiis at quas quia doloribus, quo veniam ab? Ad maiores harum quos!</p>
-            </a>
-            <a href="{{ url_for('python_developer') }}" class="col mx-5 text-decoration-none text-dark new-sect">
-                <div class="text-center">
-                    <img src="../static/images/python.png" alt="" class="p-5 category-icon anim">
-                </div>
-                <h4 class="fw-light">Python Developer</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate earum, laborum eos explicabo
-                    blanditiis at quas quia doloribus, quo veniam ab? Ad maiores harum quos!</p>
-            </a>
-            <a href="{{ url_for('infographics') }}" class="col mx-5 text-decoration-none text-dark new-sect">
-                <div class="text-center">
-                    <img src="../static/images/graph_icon.png" alt="" class="p-5 category-icon anim">
-                </div>
-                <h4 class="fw-light">Infographics</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate earum, laborum eos explicabo
-                    blanditiis at quas quia doloribus, quo veniam ab? Ad maiores harum quos!</p>
+
             </a>
 
+            <a href="{{ url_for('front_end') }}" class="col mx-5 text-decoration-none text-dark new-sect">
+                <div class="text-center">
+                    <svg width="126" height="127" viewBox="0 0 126 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="python_svg">
+                        <path id="btm_left" fill-rule="evenodd" clip-rule="evenodd" d="M88.0114 120.5C92.5446 116.889 93.0114 110.5 93.0114 110.5L93.0114 94L93.0114 78.5C93.0114 78.5 92.9991 72.8231 89.0114 69.5C83.0114 64.5 79.0114 64.5 79.0114 64.5L46.0114 64.5C46.0114 64.5 38.2436 64.3534 33.0114 58C29.8672 54.182 28.5114 48.5 28.5114 43C28.023 36.8096 28.5114 32 28.5114 32L16.5114 32C12.5783 32.3933 11.2799 33.4022 9.80579 34.5475C9.40594 34.8581 8.99318 35.1788 8.51141 35.5C-0.670547 41.6213 0.0114082 64.5 0.0114082 64.5C0.0114082 64.5 0.439678 80.0612 5.51141 86.5C11.0114 93.4825 20.5114 94 20.5114 94L62.5114 94L62.5114 97.5L32.0114 97.5L32.0114 110.5C32.0114 110.5 31.9887 117.908 37.0114 121.5C43.4843 126.129 52.8035 126.065 60.9336 126.009C61.465 126.006 61.9913 126.002 62.5114 126C62.6978 125.999 62.8845 125.998 63.0716 125.998C71.8073 125.962 81.2019 125.925 88.0114 120.5ZM46.0114 105.5C42.6977 105.5 40.0114 108.186 40.0114 111.5C40.0114 114.814 42.6977 117.5 46.0114 117.5C49.3251 117.5 52.0114 114.814 52.0114 111.5C52.0114 108.186 49.3251 105.5 46.0114 105.5Z" fill="url(#paint0_linear_1_17)"/>
+                        <path id="top+right" fill-rule="evenodd" clip-rule="evenodd" d="M37 6C32.4669 9.6112 32 16 32 16V32.5V48C32 48 32.0123 53.6769 36 57C42 62 46 62 46 62H79C79 62 86.7678 62.1466 92 68.5C95.1442 72.318 96.5 78 96.5 83.5C96.9884 89.6904 96.5 94.5 96.5 94.5H108.5C112.433 94.1067 113.732 93.0979 115.206 91.9526C115.605 91.6419 116.018 91.3212 116.5 91C125.682 84.8787 125 62 125 62C125 62 124.572 46.4388 119.5 40C114 33.0175 104.5 32.5 104.5 32.5H62.5V29H93V16C93 16 93.0227 8.59158 88 5C81.5271 0.371452 72.2079 0.435052 64.0778 0.490536C63.5464 0.494163 63.0201 0.497755 62.5 0.499999C62.3136 0.500804 62.1269 0.501557 61.9399 0.502311C53.2042 0.537531 43.8095 0.575408 37 6ZM79 21C82.3137 21 85 18.3137 85 15C85 11.6863 82.3137 9 79 9C75.6863 9 73 11.6863 73 15C73 18.3137 75.6863 21 79 21Z" fill="url(#paint1_linear_1_17)"/>
+                        </g>
+                        <defs>
+                        <linearGradient id="paint0_linear_1_17" x1="93" y1="29" x2="33" y2="97.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#638487"/>
+                        <stop offset="1" stop-color="#A8DCDC"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_1_17" x1="92.5" y1="28" x2="33" y2="98" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#529FA4"/>
+                        <stop offset="1" stop-color="#255053"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                        
+
+                    <!-- <img src="../static/images/python.png" alt="" class="p-5 category-icon anim"> -->
+                </div>
+                <h4 class="fw-light">UX/UI</h4>
+                <p>Make your site pop! With custom CSS, Sass and Bootstrap I can turn that boring interface into an exciting user experience for you and your clients. If you're looking for something a bit more 21st century then JavaScript mixed with Blender is what you're looking for. </p>
+            </a>
+
+            <a href="{{ url_for('back_end') }}" class="col mx-5 text-decoration-none text-dark new-sect">
+                <div class="text-center">
+                    <svg width="126" height="127" viewBox="0 0 126 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="python_svg">
+                        <path id="btm_left" fill-rule="evenodd" clip-rule="evenodd" d="M88.0114 120.5C92.5446 116.889 93.0114 110.5 93.0114 110.5L93.0114 94L93.0114 78.5C93.0114 78.5 92.9991 72.8231 89.0114 69.5C83.0114 64.5 79.0114 64.5 79.0114 64.5L46.0114 64.5C46.0114 64.5 38.2436 64.3534 33.0114 58C29.8672 54.182 28.5114 48.5 28.5114 43C28.023 36.8096 28.5114 32 28.5114 32L16.5114 32C12.5783 32.3933 11.2799 33.4022 9.80579 34.5475C9.40594 34.8581 8.99318 35.1788 8.51141 35.5C-0.670547 41.6213 0.0114082 64.5 0.0114082 64.5C0.0114082 64.5 0.439678 80.0612 5.51141 86.5C11.0114 93.4825 20.5114 94 20.5114 94L62.5114 94L62.5114 97.5L32.0114 97.5L32.0114 110.5C32.0114 110.5 31.9887 117.908 37.0114 121.5C43.4843 126.129 52.8035 126.065 60.9336 126.009C61.465 126.006 61.9913 126.002 62.5114 126C62.6978 125.999 62.8845 125.998 63.0716 125.998C71.8073 125.962 81.2019 125.925 88.0114 120.5ZM46.0114 105.5C42.6977 105.5 40.0114 108.186 40.0114 111.5C40.0114 114.814 42.6977 117.5 46.0114 117.5C49.3251 117.5 52.0114 114.814 52.0114 111.5C52.0114 108.186 49.3251 105.5 46.0114 105.5Z" fill="url(#paint0_linear_1_17)"/>
+                        <path id="top+right" fill-rule="evenodd" clip-rule="evenodd" d="M37 6C32.4669 9.6112 32 16 32 16V32.5V48C32 48 32.0123 53.6769 36 57C42 62 46 62 46 62H79C79 62 86.7678 62.1466 92 68.5C95.1442 72.318 96.5 78 96.5 83.5C96.9884 89.6904 96.5 94.5 96.5 94.5H108.5C112.433 94.1067 113.732 93.0979 115.206 91.9526C115.605 91.6419 116.018 91.3212 116.5 91C125.682 84.8787 125 62 125 62C125 62 124.572 46.4388 119.5 40C114 33.0175 104.5 32.5 104.5 32.5H62.5V29H93V16C93 16 93.0227 8.59158 88 5C81.5271 0.371452 72.2079 0.435052 64.0778 0.490536C63.5464 0.494163 63.0201 0.497755 62.5 0.499999C62.3136 0.500804 62.1269 0.501557 61.9399 0.502311C53.2042 0.537531 43.8095 0.575408 37 6ZM79 21C82.3137 21 85 18.3137 85 15C85 11.6863 82.3137 9 79 9C75.6863 9 73 11.6863 73 15C73 18.3137 75.6863 21 79 21Z" fill="url(#paint1_linear_1_17)"/>
+                        </g>
+                        <defs>
+                        <linearGradient id="paint0_linear_1_17" x1="93" y1="29" x2="33" y2="97.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#638487"/>
+                        <stop offset="1" stop-color="#A8DCDC"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_1_17" x1="92.5" y1="28" x2="33" y2="98" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#529FA4"/>
+                        <stop offset="1" stop-color="#255053"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                        
+
+                    <!-- <img src="../static/images/python.png" alt="" class="p-5 category-icon anim"> -->
+                </div>
+                <h4 class="fw-light">Back-end</h4>
+                <p>Do you have a need for database management? Is your dynamic webpage slow and filled with bugs? Do you just want to optimize your architecture? From SQL to JavaScript to Python, I've got you covered.</p>
+            </a>
+
+
+        </div>
+
+        <div class="row">
+            <div class="text-center my-5">
+                <h4>Not sure which service is right for you?</h4>
+                <a href="{{ url_for('services') }}" class="btn btn-lg btn-success rounded-5">
+                    <h5 class="m-0 p-0 fw-light">Find Out Here</h5>
+                </a>
+            </div>
 
         </div>
     </div>
 </section>
 
+
+
 <section>
 
+    {% for project in projects_list %}
 
-    <div class="container my-5">
-        {% for project in projects %}
+    <div class="container ">
+        <div class="display-6">{{ project.category }}</div>
+    </div>
+    <div class="container bg-secondary text-white rounded rounded-3">
+        <div class="d-inline-flex justify-content-between w-100">
 
-        <div class="main-proj-head bg-dark">
-
-            <div class="d-inline-flex justify-content-between w-100">
-                <h1 class="text-white">Flask Website Design</h1>
-                <h5 class="text-secondary">{{ project['date'] }}</h5>
-            </div>
-
-
-
+            <div class="display-5">{{ project.title }}</div>
+            <p class="opacity-50">{{ project.date }}</p>
         </div>
-
 
         <hr>
-        <p class="text-secondary">{{ project["date"] }}</p>
 
-        <h3>{{ project["title"] }}</h3>
-        <p>{{ project["description"] }}</p>
-        <div class="px-5 mb-5">
-
-
-            <img src="{{ project['img'] }}" alt="" class="graph">
+        <div class="row p-3">
+            <div class="col">
+                <h5>Goal:</h5>
+                <p>{{ project.goal }}</p>
+            </div>
+            <div class="col">
+                <h5>Strategy:</h5>
+                <p>{{ project.strategy }}</p>
+            </div>
+            <div class="col">
+                <h5>Outcome:</h5>
+                <p>{{ project.result }}</p>
+            </div>
         </div>
-        <p>{{ project["closing"] }}</p>
+    </div>
+
+    <div class="container my-4">
+        <h5>Description: </h5>
+
+        <p>{{ project.brief_description }}</p>
+
+        <div class="row my-3">
+            {% for img in project.images %}
+
+            <div class="col">
+                <div class="border border-3 p-5">
+                    {{ img }}
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+
+        <div class="row">
+            <h5>Closing: </h5>
+            <p> {{ project.closing }}</p>
+        </div>
 
 
-        <button class="btn btn-outline-primary">Button One</button>
-        <button class="btn btn-outline-info">Button Two</button>
+    </div>
+    <div class="container">
 
+        {% for link in project.links %}
 
-
+        <a href="#" class="btn btn-outline-info">{{ link }}</a>
 
         {% endfor %}
     </div>
 
 
+
+    {% endfor %}
+
 </section>
-
-
 
 
 

@@ -1,32 +1,202 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="container">
-    <a href="{{ url_for('home') }}" class="btn btn-outline-secondary m-2"> Back</a>
-<h1>About</h1>
+<div class="container py-5">
 
-<h5>Animals</h5>
-<p>I like animals</p>
-<a href="{{ url_for('animals') }}" class="col mx-5 text-decoration-none text-dark new-sect">
-    <img src="../static/images/dog_prints.png" alt="" class="p-5 category-icon">
-    <h4 class="fw-light">Animal Enthusiast</h4>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate earum, laborum eos explicabo
-        blanditiis at quas quia doloribus, quo veniam ab? Ad maiores harum quos!</p>
-</a>
-<hr>
+    <div class="display-4 text-center">some information about what I do</div>
+    <p class="text-center">and who I am</p>
+
+    <div class="fw-light m-5 text-center h3">Visualize your business with ZSDynamics</div>
+
+    
+
+    <div class="fw-light m-5 text-center h3x">I make data science simple with<strong> easy to understand </strong> analytics and
+        <strong>visual</strong> storytelling</div>
+   
+    <hr>
 
 
-<h5>Science</h5>
-<h6>Quantum mechanics/ Evolution/ Physics</h6>
-<p>Read "A Brief History of Time" and was upset by how little I understood</p>
-<hr>
 
-<h5>Writing</h5>
-<p>Alzhimer's story </p>
-<hr>
 
-<h5>Comedy</h5>
-<p>Greenhorn</p>
+    <div class="row my-5">
+        <div class="col-5">
+            <img src="../static/images/math_temp.jpeg" alt="">
+        </div>
+        <div class="col">
+
+            <p class="fw-light">
+                I'm <strong>Zachary</strong> from Denver, Colorado, and I am the founder of ZSDynamics - a one-stop-shop
+                for data science. I started ZSDynamics because I have a strong passion for mixing science, math and art
+                in
+                unique and interesting ways.
+
+                <br>
+                <br>
+
+                After several big-leaps and a lot of pivotting to start a career in storytelling, I decided it was time
+                to attempt a new approach, which led me to <strong>data science.</strong>Whether it's 3D simulations or
+                scientific data analysis, my platform is meant to meet any and all data driven needs you may have.
+
+                <br>
+                <br>
+
+                Data science can be a daunting task to attempt on your own, so my goal is to help you understand what to
+                do with all that data you worted so hard to collect and create an actionalable game plan for what to do
+                next.
+
+
+            </p>
+            <div>
+                <a class="btn btn-outline-success rounded-5" href="{{ url_for('portfolio') }}">See how other business have benefited</a>
+
+                <div class="my-2">
+                <p class="p-0 m-0">no money down, risk-free quote</p>
+                <a class="btn btn-lg btn-info rounded-5" href="{{ url_for('contact') }}">Free Quote</a>
+            </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div id="testimonials" class="carousel slide border border-2 p-3 mx-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+                <div class="col-3 d-inline-flex justify-content-end">
+                    <img src="../static/images/temp_headshot.jpeg" class="d-block rounded-circle testimonial-img" alt="temp_headshot">
+                </div>
+                <div class="col my-auto mx-5">
+                    <figure>
+                        <blockquote class="blockquote">
+                          <p>A well-known quote, contained in a blockquote element.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                          Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                      </figure>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+                <div class="col-3 d-inline-flex justify-content-end">
+                    <img src="../static/images/temp_headshot2.jpeg" class="d-block rounded-circle testimonial-img" alt="temp_headshot">
+                </div>
+                <div class="col my-auto mx-5">
+                    <figure>
+                        <blockquote class="blockquote">
+                          <p>A well-known quote, contained in a blockquote element.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                          Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                      </figure>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <br>
+    <br>
+
+
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <div>
+        <img id="this" src="../static/images/hours_a_day.png" alt="">
+        <h3>My Story:
+        </h3>
+        <p>
+            What attracted me to data science the most was my skills with <a href="#"> Blender </a>, an opensource, 3D animation software which can be used for almost any and every need you may have with data visualization. I knew the math and the software, now I just had to learn the language. 
+        </p>
+        <p>
+            After doing a bit of research I discovered that Python was the language for me. I jumped on YouTube and started watching tutorials from the basics to neuroscience computation and everything in between. Through plenty of trial and error I created a <a href="#"> note-taking and studying strategy</a> that worked for me. 
+        </p>
+        <p>Needing to still bring home a paycheck to survive I switched to part-time as a casino dealer and logged anywhere from 4 to 12 hours a day watching tutorials, reading documentation, creating projects and drinking lot's of coffee. After a year of confusion, pulling out my hair and screaming at my monitor, "Why isn't this working?!" I finally got to a point where I was ready to put myself into the 'ready-to-work' hiring pool and make it all look easy.</p>
+
+    </div>
+
+
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-5">
+            <img src="../static/images/outside_the_box.jpeg" alt="">
+        </div>
+        <div class="col order-first">
+            <h4>Competitive Advantage:</h4>
+            <p>Many data scientists or data analyists today come from a bootcamp where they're taught how to
+                proficiently complete school projects, but not much else. When out in the real world there are problems
+                that arise which can only be solved with creative problem solving that coding bootcamps just can't
+                teach.</p>
+            <p>With no syllabis, no professor and no course material to turn to I had to, not think outside the box, but
+                create the box entirely from scratch which added more time to to my eventual "graduation" but allowed me
+                to gather and develop skills I wouldn't possess otehrwise.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+   
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-2">
+            <img src="../static/images/logo.png" alt="">
+        </div>
+        <div class="col">
+            <h4>Get to know me:</h4>
+            <p>I've given a lot of info about my services and past but to really know me you need to know my real
+                passion is <a href="#" class="text-black">animals.</a> If I could find a way to inject animal-welfare
+                into data science more prominently I would, but in the meantime I will continue to fight against
+                factory-farming by suggesting you check out free-range and torture-free animal products. Or even better,
+                lab-grown meat--
+            </p>
+            <p>"I don't believe in Science" is a strange sentence to hear outloud but I have to give it some slack
+                knowing what I know now about quantum mechanics. Particles that aren't particles, waves that aren't
+                waves, time-travel, being in two places at once, faster than light communication, the smaller you get
+                the more it feels like we're muggles unaware of the magical all around us. I'm no expert but continue to
+                get my mind blown on a daily basis learning new and interesting facts about this strange world.</p>
+
+            <p>My desire to tell stories is clear above but it wasn't always science or math based. I thought for the
+                longest time I'd be a writer. My short story, <a href="#">"Cassie"</a> ended up in the Aviator magaize
+                back in 2012 and I also wrote a novel<a href="#">"Timeline 7"</a>. With no real advancements in my
+                writing career I decided to take a stab at animation and created a TV pilot <a href="#">Greenhorn</a>
+                (viewer descretion advised).</p>
+
+        </div>
+    </div>
+
+
+
+
+
 </div>
 
 
